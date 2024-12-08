@@ -34,5 +34,5 @@ jobs:
 
       - name: Publish to npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.ABHINAV_ACTION_PACKAGE}}
         run: npm publish
