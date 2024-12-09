@@ -23,15 +23,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Optional: Run Tests
       - name: Run Tests
         run: npm test
 
-      # Optional: Lint Code
       - name: Lint Code
         run: npm run lint
 
-      # Optional: Build Package
       - name: Build Package
         run: npm run build
 
