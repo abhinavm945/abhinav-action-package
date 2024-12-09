@@ -37,13 +37,9 @@ jobs:
 
       # Configure Git before version bump
       - name: Configure Git
-        run: |
+        run:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      # Bump version
-      - name: Bump Version
-        run: npm version patch -m "chore(release): Bump to version %s"
 
       - name: Publish to npm
         env:
