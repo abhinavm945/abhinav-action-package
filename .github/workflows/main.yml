@@ -35,12 +35,6 @@ jobs:
       - name: Build Package
         run: npm run build
 
-      # Configure Git before version bump
-      - name: Configure Git
-        run:
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ABHINAV_ACTION_PACKAGE }}
