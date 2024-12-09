@@ -23,14 +23,25 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # Optional: Run Tests
       - name: Run Tests
         run: npm test
 
+      # Optional: Lint Code
       - name: Lint Code
         run: npm run lint
 
+      # Optional: Build Package
       - name: Build Package
         run: npm run build
+
+      # Bump version
+      - name: Bump Version
+        run: |
+          npm version patch -m "chore(release): Bump to version %s"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push origin main
 
       - name: Publish to npm
         env:
